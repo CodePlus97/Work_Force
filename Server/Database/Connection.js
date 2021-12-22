@@ -1,18 +1,19 @@
 import mongoose from "mongoose";
 
-const mongoDB =
-  "mongodb+srv://CodePlus:97_Codeplus@codeplus.iinr9.mongodb.net/Work_Force?retryWrites=true&w=majority";
-
-export default async () => {
-  return mongoose.connect(mongoDB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-};
+//mogodb link
+// const mongoDB =
+//   "mongodb+srv://CodePlus:97_Codeplus@codeplus.iinr9.mongodb.net/?retryWrites=true&w=majority";
 
 // export default async () => {
-//   return mongoose.connect(process.env.MONGO_URL, {
+//   return mongoose.connect(mongoDB, {
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true,
 //   });
 // };
+
+export default async () => {
+  return mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+};
